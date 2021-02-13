@@ -131,31 +131,45 @@ FLEX
 /* -----------------------------------------------
 /* [Practicality Rule set]
 -------------------------------------------------- */
+
 /*  fxrow-**
 -------------------------------------------------- */
+
+/* fxrow-** */
 @mixin fxrow{
     @include --fx;
     @include --fxdir-row;
 }
-
 @mixin fxrow-jsb{
     @include --fx;
     @include --fxdir-row;
     @include --fxjty-between;
 }
 
+/* fxrow-a*-** */
 @mixin fxrow-ac-jc{
     @include --fx;
     @include --fxdir-row;
     @include --fxain-center;
     @include --fxjty-center;
 }
-
+@mixin fxrow-ac-js{
+    @include --fx;
+    @include --fxdir-row;
+    @include --fxain-center;
+    @include --fxjty-start;
+}
 @mixin fxrow-ac-je{
     @include --fx;
     @include --fxdir-row;
     @include --fxain-center;
     @include --fxjty-end;
+}
+@mixin fxrow-ac-jsb{
+    @include --fx;
+    @include --fxdir-row;
+    @include --fxain-center;
+    @include --fxjty-between;
 }
 
 @mixin infxrow-ac-jc{
@@ -164,50 +178,16 @@ FLEX
     @include --fxain-center;
     @include --fxjty-center;
 }
-
-@mixin fxrow-ac-js{
-    @include --fx;
-    @include --fxdir-row;
-    @include --fxain-center;
-    @include --fxjty-start;
-}
-
-@mixin fxrow-ac-jsb{
-    @include --fx;
-    @include --fxdir-row;
-    @include --fxain-center;
-    @include --fxjty-between;
-}
-
 @mixin fxrow-ac{
     @include --fx;
     @include --fxdir-row;
     @include --fxain-center;
 }
-
 @mixin fxroww-ac{
     @include --fx;
     @include --fxdir-row;
     @include --fxwrap;
     @include --fxain-center;
-}
-
-@mixin fxrow-js{
-    @include --fx;
-    @include --fxdir-row;
-    @include --fxjty-start;
-}
-
-@mixin fxrow-je{
-    @include --fx;
-    @include --fxdir-row;
-    @include --fxjty-end;
-}
-
-@mixin fxrow-jc{
-    @include --fx;
-    @include --fxdir-row;
-    @include --fxjty-center;
 }
 
 @mixin fxrow-as-jsb{
@@ -217,8 +197,30 @@ FLEX
     @include --fxjty-between;
 }
 
+
+/* fxrow-j*-** */
+@mixin fxrow-js{
+    @include --fx;
+    @include --fxdir-row;
+    @include --fxjty-start;
+}
+@mixin fxrow-je{
+    @include --fx;
+    @include --fxdir-row;
+    @include --fxjty-end;
+}
+@mixin fxrow-jc{
+    @include --fx;
+    @include --fxdir-row;
+    @include --fxjty-center;
+}
+
+
+
 /*  fxcol-**
 -------------------------------------------------- */
+
+/* fxcol-** */
 @mixin fxcol{
     @include --fx;
     @include --fxdir-col;
@@ -228,26 +230,25 @@ FLEX
     @include --fxdir-col;
     @include --fxjty-between;
 }
-
+@mixin fxcol-jc{
+    @include --fx;
+    @include --fxdir-col;
+    @include --fxjty-center;
+}
 @mixin fxcol-ac-jc{
     @include --fx;
     @include --fxdir-col;
     @include --fxain-center;
     @include --fxjty-center;
 }
-@mixin fxcol-jc{
+@mixin fxcol-as{
     @include --fx;
     @include --fxdir-col;
-    @include --fxjty-center;
+    @include --fxain-start;
 }
 
 
-@mixin fxcol-ac-jsb{
-    @include --fx;
-    @include --fxdir-col;
-    @include --fxain-center;
-    @include --fxjty-between;
-}
+/* fxcol-a*-** */
 @mixin fxcol-ac-js{
     @include --fx;
     @include --fxdir-col;
@@ -260,7 +261,12 @@ FLEX
     @include --fxain-center;
     @include --fxjty-end;
 }
-
+@mixin fxcol-ac-jsb{
+    @include --fx;
+    @include --fxdir-col;
+    @include --fxain-center;
+    @include --fxjty-between;
+}
 
 @mixin fxcol-as-jsb{
     @include --fx;
@@ -276,11 +282,7 @@ FLEX
 }
 
 
-@mixin fxcol-as{
-    @include --fx;
-    @include --fxdir-col;
-    @include --fxain-start;
-}
+
 
 
 /*======================================================================
