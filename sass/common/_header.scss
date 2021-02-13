@@ -23,8 +23,7 @@ _header.scss
         margin: 0 auto;
         padding-right: 15px;
         padding-left: 15px;
-        display: flex;
-        justify-content: space-between;
+        @include fxrow-ac-jsb;
     }
 }
 
@@ -103,8 +102,7 @@ body.is-fix .l-nav {
     right: 0;
     bottom: 0;
     width: 100%;  
-    display: flex;
-    justify-content: flex-end;
+    @include fxrow-je;
     
     &__content{
         opacity: 0;
@@ -113,12 +111,10 @@ body.is-fix .l-nav {
         min-width: 300px;
         -webkit-perspective: 500px;
         perspective: 500px;
-        -webkit-transform: translateX(100px);
-        transform: translateX(100px);
+        @include transform-trX(100px);
         -webkit-transform-origin: right;
         transform-origin: right;
-        -webkit-transition-duration: .4s;
-        transition-duration: .4s;
+        @include transition(.4s);
         -webkit-transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
         transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
     }
@@ -132,8 +128,7 @@ body.is-fix .l-nav {
         bottom: 0;
         opacity: 0;
         background-color: rgba(0, 0, 0, 0.5);
-        -webkit-transition-duration: .4s;
-        transition-duration: .4s;
+        @include transition(.4s);
     }
 }
 
@@ -142,8 +137,7 @@ body.is-fix {
         opacity: 1;
         visibility: visible;
         -webkit-overflow-scrolling: touch;
-        -webkit-transform: translateX(0);
-        transform: translateX(0);
+        @include transform-trX(0);
     }
     
     & .globalNavSP__bg {
@@ -199,13 +193,7 @@ body.is-fix {
         
         &__main{
             height: 100%;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            justify-content: space-between;
+            @include fxrow-ac-jsb;
         }
         
         &__item {
@@ -259,27 +247,18 @@ body.is-fix {
         
         &__main{
             height: 100%;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            justify-content: space-between;
+            @include fxrow-ac-jsb;
         }
         
         &__item {
             height: 100%;
             width: 12.5%;
-            display: flex;
-            justify-content: center;
+            @include fxrow-jc;
         }
         
         &__lnk--main
         {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
+            @include fxrow-ac;
             height: 100%;
             color: $color-b1;
             font-size: 1.8rem;
@@ -336,8 +315,7 @@ body.is-fix {
         width: 24px;
         height: 3px;
         background-color: $color-t1;
-        -webkit-transition-duration: .1s;
-        transition-duration: .1s;
+        @include transition(.1s);
     }
 }
 
@@ -397,13 +375,7 @@ body.is-fix {
     height: 60px;
     padding-right: 15px;
     padding-left: 15px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    justify-content: space-between;
+    @include fxrow-ac-jsb;
     position: relative; 
 }
 
@@ -429,30 +401,17 @@ body.is-fix {
 }
 
 .mvHeaderSns{
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+    @include fxrow-ac;
     
     &__lnk{
         display: inline-block;
         height: 100%;
         width: auto;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        justify-content: center;
-        -webkit-transition: all .1s;
-        transition: all .1s;
+        @include fxrow-ac-jc;
+        @include transition(.1s);
         
         &>img{
-            -webkit-transform: scale(.8);
-            transform: scale(.8);
+            @include transform-sc(.8);
         }
         
         &:hover{opacity: .7;}
@@ -465,22 +424,14 @@ body.is-fix {
     &__lnk{
         width: 90px;
         height: 30px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        justify-content: center;
+        @include fxrow-ac-jc;
         background-color: $color-t1;
         color: #fff !important;
         font-size: 1.4rem;
         font-weight: bold;
         letter-spacing: .1.5;
         text-transform: uppercase;
-        -webkit-transition: all .1s;
-        transition: all .1s;
-        
+        @include transition(.1s);        
         &:hover{opacity: .7;}
     }
 }
@@ -495,8 +446,7 @@ body.is-fix {
     .mvHeaderSns{        
         &__lnk{
             &>img{
-                -webkit-transform: scale(1);
-                transform: scale(1);
+                @include transform-sc(1);
                 margin-right: 10px;
             }
         }
@@ -515,9 +465,7 @@ body.is-fix {
         width: 100%;
         min-height: 300px;
         height: 50vh;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
+        @include bg--cv;
         
         &--01{background-image: url(../images/mv--01.jpg);}
         &--02{background-image: url(../images/mv--02.jpg);}

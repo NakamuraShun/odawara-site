@@ -36,13 +36,7 @@ _page.scss
     }
     
     &__icon{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        justify-content: center;
+        @include fxrow-ac-jc;
         padding: 0 2rem;
         
         & > i {
@@ -52,13 +46,7 @@ _page.scss
     }
     
     &__txt{
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        justify-content: center;
+        @include fxrow-ac-jc;
         
         & span {
             color: $color-s1;
@@ -83,21 +71,13 @@ _page.scss
     
     & a {
         color: $color-b1;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
+        @include fxrow-jc;
         background-color: $color-g2;   
         border: 2px solid;
         border-color: $color-g1;
         border-radius: 5px;
         margin-bottom: 15px;
-        -webkit-transition: all .1s;
-        transition: all .1s;
+        @include transition(.1s);
         
         &:hover{
             opacity: .8;
@@ -122,8 +102,7 @@ _page.scss
     -webkit-box-align: flex-start;
     -ms-flex-align: flex-start;
     align-items: flex-start;
-    
-    
+    @include fxcol-as;
     
     &__info {
         margin-top: 1.5rem;
@@ -173,24 +152,16 @@ _page.scss
     &__contentWrap{
         position: relative;
         overflow: hidden;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-color: $color-b1;
-        background-image: url(../../images/historyBnrContent-bg.png);
         font-family: 'Noto Serif JP';
-        -webkit-transition: all .4s;
-        transition: all .4s;
+        @include bgimg--cv("../../images/historyBnrContent-bg.png");
+        @include transition(.4s);
     }
     
     &__imgWrap {
         position: relative;
         overflow: hidden;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-color: $color-b1;
-        background-image: url(../../images/minaka.jpg);
+        @include bgimg--cv("../../images/minaka.jpg");
+        
         /*padding-top: 33.3333%;*/
         /* 3:1 */
         padding-top: 40%; 
@@ -202,10 +173,7 @@ _page.scss
     }
     
     &__icon {
-        position: absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%,-50%);
+        @include po--ac;
         width: 100%;
         height: 100%;
         background-repeat: no-repeat;
@@ -226,8 +194,7 @@ _page.scss
         
         &__icon {
             background-image: url(../../images/hojo-logo.png);
-            -webkit-transition: all .1s;
-            transition: all .1s;
+            @include transition(.1s);
         }
         
         &:hover &__icon{

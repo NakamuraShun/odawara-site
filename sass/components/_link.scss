@@ -12,8 +12,7 @@ _link.scss
 .lnk-txt--footer {
     display: inline-block;
     color: inherit;
-    -webkit-transition: all .1s;
-    transition: all .1s;
+    @include transition(.1s);
     
     & > a {
         display: block;
@@ -26,8 +25,7 @@ _link.scss
     }
     
     &:hover {
-        -webkit-transform:translateX(.2rem);
-        transform:translateX(.2rem);
+        @include transform-trX(.2rem);
     }
 }
 
@@ -63,16 +61,7 @@ _link.scss
 /*  wrap-btn
 -------------------------------------------------- */
 .wrap-btn {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    @include fxrow-jc;
     width: 100%;
     margin-top: 30px;
 }
@@ -115,12 +104,7 @@ _link.scss
         top: 0;
         bottom: 0;
         right: .7rem;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
+        @include fxrow-ac;
         font-size: 1.4rem;
     } 
     
@@ -133,10 +117,8 @@ _link.scss
         left: 0;
         right: 0;
         bottom: 0;
-        -webkit-transform: scale(0);
-        transform: scale(0);
-        -webkit-transition: all .1s;
-        transition: all .1s;
+        @include transform-sc(0);
+        @include transition(.1s);
         -webkit-transition-timing-function: ease-out;
         transition-timing-function: ease-out;
     }
