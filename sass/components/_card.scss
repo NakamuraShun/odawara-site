@@ -56,6 +56,14 @@ _card.scss
         }
     }
     
+    &__txt{
+        margin-top: 2px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+    
     &__icon {
         margin-top: 10px;  
         color: $color-g3;
@@ -137,9 +145,15 @@ _card.scss
         }
     }
     
-    &__txt {
+    &__txt{
         font-size: 1.4rem;
+        margin-top: 2px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
     }
+    
     &__lnk {
         font-size: 1.4rem;
     }

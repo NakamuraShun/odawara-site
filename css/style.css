@@ -1141,8 +1141,13 @@ FLEX
 -------------------------------------------------- */
 /*  fxrow-**
 -------------------------------------------------- */
+/* fxrow-** */
+/* fxrow-a*-** */
+/* fxrow-j*-** */
 /*  fxcol-**
 -------------------------------------------------- */
+/* fxcol-** */
+/* fxcol-a*-** */
 /*======================================================================
 POSITION
 ======================================================================*/
@@ -2688,6 +2693,13 @@ _card.scss
   font-weight: 600;
   letter-spacing: 1px;
 }
+.crd-typeA__txt {
+  margin-top: 2px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
 .crd-typeA__icon {
   margin-top: 10px;
   color: #5a5a5a;
@@ -2818,6 +2830,11 @@ _card.scss
 }
 .crd-external__txt {
   font-size: 1.4rem;
+  margin-top: 2px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
 }
 .crd-external__lnk {
   font-size: 1.4rem;
